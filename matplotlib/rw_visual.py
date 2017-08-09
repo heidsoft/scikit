@@ -7,6 +7,7 @@ from random_walk import RandomWalk
 while True:
       rw=RandomWalk(50000)   #创建一个RandomWalk实例，将其包含的点都绘制出来
       rw.fill_walk()
+      plt.figure(figsize=(10,6))
 
       point_numbers=list(range(rw.num_points))
       plt.scatter(rw.x_values,rw.y_values,c=point_numbers,cmap=plt.cm.Blues,edgecolor='none',s=1)
@@ -16,7 +17,7 @@ while True:
 
       plt.axes().get_xaxis().set_visible(False)
       plt.axes().get_yaxis().set_visible(False)
-      plt.savefig('rw_visual.png',bbox_inches='tight')
+      #plt.savefig('rw_visual.png',bbox_inches='tight')
       plt.show()
 
       keep_running=raw_input("Make another walk? (y/n):")   #input on python3
