@@ -24,4 +24,5 @@ plt.scatter(x_values,y_values,c=y_values,cmap=plt.cm.Blues,edgecolor='none',s=40
 
 plt.axis([0,1100,0,1100000])
 
-plt.show()
+#plt.show()
+plt.savefig('squares_plot.png',bbox_inches='tight')  #第二个实参将图表多余的空白部分裁剪掉
